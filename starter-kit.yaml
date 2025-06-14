@@ -11,5 +11,4 @@ export_paths:
   - public/build
   - storage/forms
   - package.json
-  - vite.config.js
   - README.md
