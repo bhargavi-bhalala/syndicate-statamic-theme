@@ -57,7 +57,7 @@ Make sure you're running **Statamic 5.x** for compatibility.
 ### Installing into an existing site
 
 ```bash
-php please starter-kit:install webbycrown/syndicate-statamic-theme
+php please starter-kit:install bhargavi-bhalala/syndicate-statamic-theme
 ```
 
 ### Installing via the Statamic CLI Tool
@@ -65,4 +65,4 @@ php please starter-kit:install webbycrown/syndicate-statamic-theme
 If you have the [Statamic CLI Tool](https://github.com/statamic/cli) installed, create a new Statamic installation with syndicate in one command:
 
 ```bash
-statamic new my-site webbycrown/syndicate-statamic-theme
+statamic new my-site bhargavi-bhalala/syndicate-statamic-theme
