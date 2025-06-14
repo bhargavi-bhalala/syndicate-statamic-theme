@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+   {{ partial:head-link }}
+    
+    <body>
+        <!-- Start Preloader -->
+        <div class="preloader">
+            <div class="preloader-inner">
+                <div class="preloader-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+        <!-- search-popup -->
+        <div class="search-popup">
+            <a href="javascript:;" class="close-search"><i class="fa-solid fa-xmark"></i></a>
+            <form action="#">
+                <div class="form-group">
+                    <input type="search" name="search-field" id="header_search" autocomplete="off" placeholder="Search Here..." required="">
+                    <button type="submit" class="home_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+
+        <!-- start-header -->
+        {{ if is_homepage }}
+            {{ setting }}
+
+                {{ if header_section == 'header_1' }}
+                    {{ partial:header-1 }}
+                {{ elseif header_section == 'header_2' }}
+                    {{ partial:header-2 }}
+                {{ else }}
+                    {{ partial:header-3 }}
+                {{ /if }}
+            {{ /setting }}
+        {{ else }}
+            {{ if segment_1 == 'home-two' }}
+                {{ partial:header-2 }}
+            {{ elseif segment_1 == 'home-three' }}
+                {{ partial:header-3 }}
+            {{ else }}
+                {{ partial:header }}
+            {{ /if }}
+        {{ /if }}
+        <!-- end-header -->
+
+        <div class="animation-scroll">
+            <div data-scroll="">
+               
+                {{ template_content }}
+                
+                <!-- start footer -->
+                {{ setting }}
+
+                {{ if footer_section == 'footer_1' }}
+                {{ partial:footer }}
+                {{ elseif footer_section == 'footer_2' }}
+                {{ partial:footer-2 }}
+                {{ else }}
+                {{ partial:footer-3 }}
+                {{ /if }}
+                {{ /setting }}
+                <!-- end footer -->
+
+                <!-- Custom Libraries script js start -->
+                <!-- jquery min js file -->
+                {{ partial:footer-link }}
+
+                <!-- Use this minifiy js for project speeded loading -->
+            </div>
+        </div>
+
+        {{ if is_homepage }}
+
+        <!-- Newsletter Popup -->
+        <a href="#newsletter-popup" class="d-none newsletter-popup-link"> Newsletter Popup</a>
+        <div id="newsletter-popup" class="mfp-hide all-pupop newsletter-popup">
+            <!-- popup body -->
+            <div class="popup-body">
+                <!-- start Popup heading -->
+                <div class="section-heading">
+                    <h2 class="popup-title">Sign up and get our exclusive offers delivered directly to your mailbox</h2>
+                </div>
+                <!-- end Popup heading -->
+                <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Non nisi est sit 
+                amet.</p>
+
+                <!-- Newsletter form Popup -->
+                <div class="newsletter-form-popup">
+                    <!-- Get free quote form -->
+                    <form class="newsletter-form get-free-quote-form quote-form" >
+                        <input type="email" class="form-control letter"  name="email" id="email"  required placeholder="Your email address">
+                        <button  type="submit" class="btn btn-primary btn-style-2 letter-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Newsletter Popup -->
+
+        <!-- Manage Cookie -->
+        <div class="cookie-popup open">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- start Popup heading -->
+                        <div class="section-heading">
+                            <h2 class="popup-title">Manage Cookie</h2>
+                        </div>
+                        <!-- end Popup heading -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Non nisi est sit amet.</p>
+
+                        <!-- cookie button -->
+                        <div class="cookie-button row">
+                            <div class="button-column">
+                                <a href="javascript:;" class="btn btn-secondary btn-style-3 accept-btn">Accept</a>
+                            </div>
+                            <div class="button-column">
+                                <a href="javascript:;" class="btn btn-gray btn-style-3 all-btn">All</a>
+                            </div>
+                            <div class="button-column">
+                                <a href="javascript:;" class="btn btn-gray btn-style-3 necessary-btn">Necesary cookies</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Manage Cookie -->
+        {{ /if }}
+    </body>
+
+</html>

@@ -1,0 +1,33 @@
+{{ if get:slug }}
+  {{ collection:blog  }}
+  {{ if slug == get:slug }}
+    {{ blog_setting }}
+
+      {{ if blog_single_page == 'blog_single_1' }}
+        {{ partial:blog-detail entry="{slug}" }}
+      {{ elseif blog_single_page == 'blog_single_2' }}
+        {{ partial:blog-detail-leftbar entry="{slug}" }}
+      {{ elseif blog_single_page == 'blog_single_3' }}
+        {{ partial:blog-detail-full entry="{slug}" }}
+      {{ /if }}
+
+    {{ /blog_setting }}
+    {{ /if }}
+  {{ /collection:blog }}
+
+{{ else }}
+
+  
+    {{ blog_setting }}
+
+      {{ if blog_single_page == 'blog_single_1' }}
+        {{ partial:blog-detail slug="{segment_2}" }}
+      {{ elseif blog_single_page == 'blog_single_2' }}
+        {{ partial:blog-detail-leftbar slug="{segment_2}" }}
+      {{ elseif blog_single_page == 'blog_single_3' }}
+        {{ partial:blog-detail-full slug="{segment_2}" }}
+      {{ /if }}
+
+    {{ /blog_setting }}
+
+{{ /if }}

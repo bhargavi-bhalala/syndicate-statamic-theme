@@ -1,0 +1,52 @@
+<!-- start Quick Online Consultancy section -->
+<section class="quick-consultancy-section content__item">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 pe-lg-4">
+        <!-- start quick-consultancy images -->
+        <div class="quick-consultancy-left">
+          <div class="quick-consultancy-img item-overflow">
+            {{ service_image }}<img src="{{ url }}" alt="quick consultancy img" class="content-item-zoom">{{ /service_image }}
+          </div>
+          <div class="quick-consultancy-service content-item-y">
+           {{ service_text }}
+          </div>
+        </div>
+        <!-- end quick-consultancy images -->
+      </div>
+      <div class="col-12 col-lg-6">
+        <!-- start quick-consultancy form -->
+        <div class="quick-consultancy-form">
+          <h3>{{ form_title }}</h3>
+          <!-- Quick Online form-->
+         {{ form:online_consult id="onlineConsultForm" }}
+            <div id="formMessages"></div>
+            <div class="form-row">
+              <div class="form-group col-12 col-md-6">
+                <input type="text" name="name" placeholder="Your name" class="form-control">
+              </div>
+              <div class="form-group col-12 col-md-6">
+                <input type="email" name="email" placeholder="Email addrress" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-12 col-md-6">
+                <input type="text"  name="advisor" placeholder="Choose advisor" class="form-control">
+              </div>
+              <div class="form-group col-12 col-md-6">
+                <input type="text" name="phone_number" placeholder="Number" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea  placeholder="Message" name="message" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            {{ /form:online_consult }}
+        </div>
+        <!-- end quick-consultancy images -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Quick Online Consultancy section -->
